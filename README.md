@@ -1,9 +1,5 @@
 # Faster Big Data Analysis
 
-I am working on a project which requires the analysis of a ~4.5GB FileGDB. This GDB contains a feature class which needs to be joined to a CSV which is 3.5 GB.
-
-These files sizes are not uncommon and do not even constitute big data to most, but it can present challenges to an analysist tasked with analysis.
-
 Working with the file in ArcGIS Pro or with a standard Python approach is cumbersome.
 
 ArcGIS Pro is an amazing tool but there are many reasons why one would want to code a solution rather than rely on a GUI.
@@ -24,7 +20,10 @@ Analysis can become so slow that it can stop you in your tracks or even become i
 
 There are some modern solutions to these problems which can GREATLY speed up the read, analysis and write time of results.
 
-The tools I am going to present are tools I've used successfully in the past to great success. I will present time and memory statistics to show the massive increase in performance achieved from these alternative methods.
+These tools include:
+- Dask
+- PySpark
+- parquet file format
 
 ## Standard Methodology
 Below shows a methodology that works great for loading smaller datasets. The FileGDB is called into a GeoDataFrame and a layer is specified.
